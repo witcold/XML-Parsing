@@ -119,7 +119,6 @@ public class Persister {
 		}
 	}
 
-	@SuppressWarnings("boxing")
 	public void persist(List<ResultBean> list, String sportName) {
 		added = 0;
 		updated = 0;

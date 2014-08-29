@@ -55,6 +55,22 @@ public class Job implements Runnable {
 		}
 	}
 
+	public long getInitialDelay() {
+		return initialDelay;
+	}
+
+	public void setInitialDelay(long initialDelay) {
+		this.initialDelay = initialDelay;
+	}
+
+	public long getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(long period) {
+		this.period = period;
+	}
+
 	@Override
 	public void run() {
 		Connection conn = null;
@@ -72,22 +88,6 @@ public class Job implements Runnable {
 				LOGGER.warn("Can't close connection");
 			}
 		}
-	}
-
-	public long getInitialDelay() {
-		return initialDelay;
-	}
-
-	public void setInitialDelay(long initialDelay) {
-		this.initialDelay = initialDelay;
-	}
-
-	public long getPeriod() {
-		return period;
-	}
-
-	public void setPeriod(long period) {
-		this.period = period;
 	}
 
 	private List<ResultBean> extract() {
